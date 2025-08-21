@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Computing Roadmap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #f4f4f4;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* === NAVBAR === */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1.5rem;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.2rem;
+    }
+    nav ul li a {
+      font-size: 0.95rem;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover { color: #ffcc70; }
+
+    .menu-btn {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    @media(max-width: 768px) {
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        background: #222;
+        flex-direction: column;
+        padding: 1rem;
+        border-radius: 10px;
+      }
+      nav ul.show { display: flex; }
+      .menu-btn { display: block; }
+    }
+
+    /* === HERO === */
+    .hero {
+      text-align: center;
+      padding: 4rem 1.5rem;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: auto;
+      color: #e0e0e0;
+    }
+
+    /* === ROADMAP === */
+    .roadmap {
+      max-width: 1100px;
+      margin: 2.5rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+    .card {
+      background: #fff;
+      color: #333;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 14px 35px rgba(0,0,0,0.25);
+    }
+    .card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      color: #2a5298;
+    }
+    .card ul { list-style: none; }
+    .card ul li {
+      padding: 0.4rem 0;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* === INSTAGRAM SECTION === */
+    .instagram {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #fff;
+      color: #333;
+      border-radius: 25px;
+      max-width: 700px;
+      margin: 2rem auto;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+    .instagram h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+      color: #2a5298;
+    }
+    .instagram p {
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+    }
+    .instagram a {
+      display: inline-block;
+      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .instagram a:hover { opacity: 0.85; }
+
+    /* === FOOTER === */
+    footer {
+      background: #111;
+      padding: 1.5rem;
+      text-align: center;
+      color: #bbb;
+      margin-top: 2rem;
+      border-top: 2px solid #2a5298;
+      font-size: 0.9rem;
+    }
+    footer a { color: #ffcc70; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <!-- === NAVBAR === -->
+  <nav>
+    <h1>☁️ Roadmap</h1>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <ul id="menu">
+      <li><a href="#year1">Year 1</a></li>
+      <li><a href="#year2">Year 2</a></li>
+      <li><a href="#year3">Year 3</a></li>
+      <li><a href="#insta">Instagram</a></li>
+    </ul>
+  </nav>
+
+  <!-- === HERO SECTION === -->
+  <section class="hero">
+    <h2>Cloud Computing Roadmap</h2>
+    <p>Your 3-year journey from beginner to job-ready in Cloud Computing. Step by step to master the cloud.</p>
+  </section>
+
+  <!-- === ROADMAP CARDS === -->
+  <section class="roadmap">
+    <div class="card" id="year1">
+      <h3>📘 Year 1 – Foundations</h3>
+      <ul>
+        <li>🌐 Networking</li>
+        <li>🐧 Linux</li>
+        <li>🐍 Python</li>
+        <li>☁️ Cloud Basics</li>
+        <li>🛠 Mini Projects</li>
+      </ul>
+    </div>
+
+    <div class="card" id="year2">
+      <h3>⚙️ Year 2 – Core Cloud Skills</h3>
+      <ul>
+        <li>🚀 DevOps</li>
+        <li>🐳 Docker</li>
+        <li>☸️ Kubernetes</li>
+        <li>📜 IaC (Terraform)</li>
+        <li>🛠 Real Projects</li>
+      </ul>
+    </div>
+
+    <div class="card" id="year3">
+      <h3>🎯 Year 3 – Advanced + Job Readiness</h3>
+      <ul>
+        <li>🔎 Specialization</li>
+        <li>📜 Certifications</li>
+        <li>💼 Portfolio</li>
+        <li>📝 Interview Prep</li>
+        <li>🚀 Job Applications</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- === INSTAGRAM SECTION === -->
+  <section class="instagram" id="insta">
+    <h2>📸 Follow Our Instagram</h2>
+    <p>@cloudcomputinghub</p>
+    <a href="http://127.0.0.1:8080" target="_blank">Follow</a>
+  </section>
+
+  <!-- === FOOTER === -->
+  <footer>
+    <p>✨ Built with ❤️ by Krish.Devlabs | 2025</p>
+    <p>Follow on <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
